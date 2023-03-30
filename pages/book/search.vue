@@ -2,7 +2,11 @@
   <div>
     <v-row>
       <v-col cols="6">
-        <v-text-field v-model="keyword" label="本のタイトルを検索" />
+        <v-text-field
+          v-model="keyword"
+          label="本のタイトルを検索"
+          @keyup.enter="search(keyword)"
+        />
       </v-col>
     </v-row>
     <v-row>
