@@ -1,5 +1,7 @@
 <template>
   <div>
+    <!-- 検索テキストボックス（エンターキーで検索も
+    を可能） -->
     <v-row>
       <v-col cols="6">
         <v-text-field
@@ -17,6 +19,7 @@
         <v-btn color="secondary" to="/book"> 一覧に戻る </v-btn>
       </v-col>
     </v-row>
+    <!-- 検索結果がないときに表示 -->
     <div v-show="!isFound" class="mt-4">検索結果は0件でした。</div>
     <v-row>
       <v-col
