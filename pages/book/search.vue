@@ -64,6 +64,7 @@ export default {
       keyword: '',
       searchResults: [],
       isFound: true,
+      feature1:null
     };
   },
   methods: {
