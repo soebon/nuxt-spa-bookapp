@@ -21,6 +21,7 @@
     </v-row>
     <!-- 検索結果がないときに表示 -->
     <div v-show="!isFound" class="mt-4">検索結果は0件でした。</div>
+    <!-- 検索結果をイメージ、タイトル、ディスクリプションの３つで一覧表示 -->
     <v-row>
       <v-col
         v-for="(book, index) in searchResults"
