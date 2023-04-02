@@ -70,6 +70,7 @@ export default {
     addBookList(index) {
       this.$emit('add-book-list', this.searchResults[index]);
     },
+    // keywordをもとにGoogleAPIから本の情報を40件取得する
     async search(keyword) {
       this.searchResults = [];
       // クエリーストリングを作成
