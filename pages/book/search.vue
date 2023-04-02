@@ -64,6 +64,7 @@ export default {
       keyword: '',
       searchResults: [],
       isFound: true,
+      feature1:null
     };
   },
   methods: {
@@ -80,13 +81,11 @@ export default {
         maxResults: 40,
       };
       const queryParams = new URLSearchParams(params);
-      // console.log(baseUrl + queryParams)
 
       // fetchでJSON取得
       const response = await fetch(baseUrl + queryParams).then((response) =>
         response.json()
       );
-      // console.log(response.items)
 
       if (response.items === undefined) {
         this.isFound = false;
