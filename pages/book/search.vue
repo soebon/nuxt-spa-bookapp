@@ -64,7 +64,7 @@ export default {
       keyword: '',
       searchResults: [],
       isFound: true,
-      feature1:null
+      feature1: null,
     };
   },
   methods: {
@@ -91,7 +91,7 @@ export default {
         this.isFound = false;
       } else {
         this.isFound = true;
-        // 必要な情報を配列にpush
+        // 必要な情報をsearchResultsにpush
         for (const book of response.items) {
           const title = book.volumeInfo.title;
           const img = book.volumeInfo.imageLinks;

@@ -21,10 +21,9 @@ export default {
   created() {
     if (localStorage.getItem(STORAGE_KEY)) {
       try {
+        // localStorageに保存されている本のデータを予めbooksに入れておく
         this.books = JSON.parse(localStorage.getItem(STORAGE_KEY));
-      } catch (e) {
-        // localStorage.removeItem(STORAGE_KEY);
-      }
+      } catch (e) {}
     }
   },
   methods: {
@@ -37,10 +36,8 @@ export default {
         readDate: '',
         memo: '',
       });
-      // this.newBook = '';
       this.saveBooks();
       // 最後に追加したidの取得コード
-      // console.log(this.books.slice(-1)[0].id);
       this.goToEditPage(this.books.slice(-1)[0].id);
     },
     removeBook(x) {
@@ -60,6 +57,7 @@ export default {
         image: this.books[e.id].image,
         description: this.books[e.id].description,
       };
+      // spliceを使って更新データに入れ替える
       this.books.splice(e.id, 1, updateInfo);
       this.saveBooks();
       this.$router.push('/book');
