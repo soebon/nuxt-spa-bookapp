@@ -18,6 +18,7 @@
               読んだ日：{{ book.readDate }} 感想：{{ book.memo }}
               <v-spacer />
               <v-card-actions>
+                <!-- 該当するeditページに遷移 -->
                 <v-btn
                   :to="{ name: 'book-edit-id', params: { id: book.id } }"
                   color="indigo"
